@@ -14,9 +14,8 @@ from datetime import datetime
 class AnalogyLauncher:
 
     configs = [
-        {'Market': 'Dukascopy', 'Symbol': 'BTCUSD', 'TimeFrame': 'D'},
-        {'Market': 'Dukascopy', 'Symbol': 'ETHUSD', 'TimeFrame': 'D'},
-        {'Market': 'Dukascopy', 'Symbol': 'LTCUSD', 'TimeFrame': 'D'}
+        {'Market': 'Dukascopy', 'Symbol': 'EURUSD', 'TimeFrame': 'D1'},
+        {'Market': 'Dukascopy', 'Symbol': 'GBPUSD', 'TimeFrame': 'D1'},
     ]
 
     def __init__(self):
@@ -48,7 +47,7 @@ class AnalogyLauncher:
         title = ""
         for i in range(len(self.configs)):
             title += f"[{self.configs[i]['Symbol']}]"
-        curstate().file['title'] = title
+        curstate().file.title = title
 
     def show(self):
         figs = []
